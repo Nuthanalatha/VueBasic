@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="first">
+      <h1>First vue application</h1>
+      <h2>{{greeting}}</h2>
+      <h2>Person name is :{{person.name}}</h2>
+
+      <!-- we can call the function
+    we can write mathematical calculation
+we can't write complex code if else condition -->
+      <h3>{{1+4}}</h3>
+      <h3>{{randomOutput()}}</h3>
+      <!-- using v-html directive to read raw html -->
+      <h3 v-html="randomOutput()"></h3>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

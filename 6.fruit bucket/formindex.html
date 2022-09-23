@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="fruitBucket">
+      <h1>Vue Fruit Bucket</h1>
+      <input type="text" placeholder="Enter Fruits" v-model="newFruitValue" />
+      <button @click="addFruit">+</button>
+      <p v-if="fruits.length===0">
+        No fruits in the bucket...Please add some fruit
+      </p>
+      <ul v-else>
+        <li
+          v-for="(fruit,index) in fruits"
+          :key="index"
+          @click="removeFruit(index)"
+        >
+          index {{index}}:{{fruit}}
+        </li>
+      </ul>
+      <!-- <p v-else>fruits are there</p> we cann't do this because we need to use if else as siblings-->
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
